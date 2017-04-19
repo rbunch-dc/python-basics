@@ -27,20 +27,21 @@
 # 	print "I hate the last line."
 
 
-# Variables - string, number, letters, any other stuff that you can make with a keyboard
-# and you want stash soemthing that's not fast, into something that is fast
+# Variables - string, number, letters, any other stuff that you can make 
+# with a keyboard and you want stash soemthing that's not fast, 
+# into something that is fast
 # There is no declaration.
 # In JS.... var name = "Shane";
-name = "Robert Bunch"
+# name = "Robert Bunch"
 # Python is not heavily typed (for instance C#)
-name = "Robert " + "Bunch"
-first_name = "Robert";
-last_name = "Bunch";
-full_name = first_name + " " + last_name
+# name = "Robert " + "Bunch"
+# first_name = "Robert";
+# last_name = "Bunch";
+# full_name = first_name + " " + last_name
 # print full_name
 
 # Arithmatic
-the_meaning_of_life = 40 + 2
+# the_meaning_of_life = 40 + 2
 # print the_meaning_of_life
 # print the_meaning_of_life / 2
 # print the_meaning_of_life % 5
@@ -60,10 +61,18 @@ the_meaning_of_life = 40 + 2
 # - dictionary - variables of variables
 # - objects - Deal with it later
 
-# Strings
-first_name = "Rob"
-last_name = "Bunch"
-# print "Hello, {} {}".format(first_name, last_name)
+# # Strings
+# first_name = "Rob"
+# last_name = "Bunch"
+
+# nickname = "Rob "the man" Bunch" BAD!
+# nickname = 'Rob "the man" Bunch'
+# nickname = "Rob \"the man\" Bunch"
+# nickname = `Rob \"the man\" Bunch`
+
+
+# formatted_string = "Hello, {} {}".format(first_name, last_name)
+# print formatted_string
 # print "Hello " + first_name + " " + last_name
 # Placeholders
 # print "Hello, %s %s" % (first_name, last_name)
@@ -74,8 +83,9 @@ last_name = "Bunch"
 # print pi_the_magic_float
 # print type(pi_the_magic_float)
 # make_me_an_integer = int(pi_the_magic_float)
+# make_me_a_string = str(pi_the_magic_float) # "3.14"
 # print make_me_an_integer
-# print .2 + .1
+# print (.2 + .1)
 
 # Booleans - true or false
 # the_truth = True
@@ -92,11 +102,28 @@ last_name = "Bunch"
 # 2 = means you want to compare whats on the left with whats on the right
 
 # if(first_name == last_name):
-	# print "Your first name is the same as yoru last name?"
+# 	print "Your first name is the same as yoru last name?"
 
-# if you want to compare = or greater than, <=
+if you want to compare = or greater than, <=
 age = raw_input("How old are you?")
 age_as_int = int(age)
 # print type(age)
+if(age_as_int != 99):
+	print "You are not 99 years old!"
 if(age_as_int >= 21):
-	print "You can buy beer"
+	print "You can buy beer."
+elif(age_as_int >= 18):
+	print "A few more years"
+else:
+	print "You are underage."
+
+import random
+random_number = random.randint(1,10)
+
+# Loop - keep doing something until I tell you to stop
+not_guessed = True
+while not_guessed:
+	guess_a_number = raw_input("Guess a number between 1 and 10.")
+	if (int(guess_a_number) == random_number):
+		print "You guessed the number!";
+		not_guessed = False;
