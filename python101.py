@@ -104,26 +104,130 @@
 # if(first_name == last_name):
 # 	print "Your first name is the same as yoru last name?"
 
-if you want to compare = or greater than, <=
-age = raw_input("How old are you?")
-age_as_int = int(age)
-# print type(age)
-if(age_as_int != 99):
-	print "You are not 99 years old!"
-if(age_as_int >= 21):
-	print "You can buy beer."
-elif(age_as_int >= 18):
-	print "A few more years"
-else:
-	print "You are underage."
+# if you want to compare = or greater than, <=
+# age = raw_input("How old are you?")
+# age_as_int = int(age)
+# # print type(age)
+# if(age_as_int != 99):
+# 	print "You are not 99 years old!"
+# if(age_as_int >= 21):
+# 	print "You can buy beer."
+# elif(age_as_int >= 18):
+# 	print "A few more years"
+# else:
+# 	print "You are underage."
 
-import random
-random_number = random.randint(1,10)
+# import random
+# random_number = random.randint(1,10)
 
 # Loop - keep doing something until I tell you to stop
-not_guessed = True
-while not_guessed:
-	guess_a_number = raw_input("Guess a number between 1 and 10.")
-	if (int(guess_a_number) == random_number):
-		print "You guessed the number!";
-		not_guessed = False;
+# not_guessed = True
+# while not_guessed:
+# 	guess_a_number = raw_input("Guess a number between 1 and 10.")
+# 	if (int(guess_a_number) == random_number):
+# 		print "You guessed the number!";
+# 		not_guessed = False;
+
+student1 = "Marissa"
+student2 = "Merilee"
+student3 = "Daniel"
+student4 = "Chris"
+
+# print(student1,student2,student3,student4)
+
+# list is a single variable with a bunch of numbered parts
+# the number that an element is in, is called the "Index"
+students = [
+	"Marissa",
+	"Merliee",
+	"Daniel",
+	"Chris",
+	"Chad",
+	"Shane",
+	"Stephen",
+	"Drew"
+]
+# The first element in a list is always 0. 
+# The second element is always 1
+
+# print (students)
+# print(students[1])
+# print(students[7])
+# # print(students[8])
+# print(students[-1])
+
+atlantaTeams = [
+	"Falcons",
+	"Braves",
+	"Hawks",
+	"Thrashers"
+]
+
+# print (atlantaTeams[0])
+print (atlantaTeams)
+# To add an element to the END of a list, you can use the append method
+atlantaTeams.append("Atl United")
+print (atlantaTeams)
+
+# Pop -- REMOVES the last item on the list
+# students.pop()
+# print students
+
+# To delete an index, you can use the remove method
+atlantaTeams.remove("Thrashers")
+print (atlantaTeams)
+# We can insert into any indicie with the insert method
+atlantaTeams.insert(0,"Tom Brady's Team")
+print (atlantaTeams)
+
+teams_as_a_string = "Falcons,Braves, Hawks, Thrashers"
+teams_as_a_list = teams_as_a_string.split(",")
+print (teams_as_a_list)
+# Sort will CHANGE the list
+# atlantaTeams.sort();
+# print (atlantaTeams)
+# Sorted will sort, but NOT CHANGE the list
+# copy_of_atlanta_teams = sorted(atlantaTeams);
+# print (copy_of_atlanta_teams)
+
+# copy_of_atlanta_teams.reverse();
+# print (copy_of_atlanta_teams);
+
+# length_of_atlanta_teams = len(copy_of_atlanta_teams)
+# print (length_of_atlanta_teams)
+# print (copy_of_atlanta_teams[-1])
+# print (copy_of_atlanta_teams[length_of_atlanta_teams-1])
+
+# print len(copy_of_atlanta_teams[0])
+
+# The other type of loop... For
+# for i in range(1,10):
+# 	print i
+
+# For Loop Format:
+# [for] [what_you_want_to_call_the_thing_you_are_on] [in] [variable_looping_through]
+# for student in students:
+# 	# print student
+# 	if(student == "Chris"):
+# 		print "Welcome, Chris!"
+# 	else:
+# 		print "You are not Chris"
+
+# Set up a for loop... but the range, will be 0 to len-1
+# students_length = len(students)
+# for i in range(0,students_length):
+# 	print(students[i])
+
+for i in range(0,10,2):
+	print(i)
+
+# If you want a portion of a list, you can use the [x:y] format
+# This will create a COPY of the array, does not mutate or change the origianl
+# it will start at the Xth element, and will stop at the Yth
+print(students)
+second_and_third = students[1:3]
+print second_and_third
+print(students)
+all_but_the_first = students[1:]
+# all_but_the_first = students[1:len(students)]
+print all_but_the_first
