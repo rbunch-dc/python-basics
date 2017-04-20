@@ -51,3 +51,5 @@ while students:
 # 	current_student = students[rand_num]
 # 	students.remove(current_student)
 # 	print (" is paired with " + current_student)
+
+print [0]
