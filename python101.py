@@ -241,47 +241,136 @@
 # To decalre a function in python, you use "def"
 # Functions ALWAYS have ()
 
-def say_hello():
-	print("Hello")
+# def say_hello():
+# 	print("Hello")
 
-# say_hello()
+# # say_hello()
 
-def say_hello_with_name(name):
-	print ("Hello, "+ name)
+# def say_hello_with_name(name):
+# 	print ("Hello, "+ name)
 
-# say_hello_with_name() #this will fail!
-# say_hello_with_name("Rob", "Chad") this will also fail
-say_hello_with_name("Nick")
-# print name
-
-
-def say_hello_with_default(name, in_class = "Yes"):
-	print ("Hello, "+ name)
-	print "Is student in class? " + in_class
-
-say_hello_with_default("Carla")
-say_hello_with_default("Max", "No")
-# say_hello_with_default("Natalie", "No","She's the best!")
-
-# Functions always return something
-def return_user_name(name):
-	return name
-
-print return_user_name("YingRong")
-
-def make_uppercase(string):
-	return string.upper()
-
-normalized_string = [make_uppercase("Im A wIlD ANd craZY GuY")]
-normalized_string.append(make_uppercase("Me toO"))
-normalized_string.append(make_uppercase("Me toO"))
-normalized_string.append(make_uppercase("Me toO"))
-normalized_string.append(make_uppercase("Me toO"))
-normalized_string.append(make_uppercase("Me toO"))
-normalized_string.append(make_uppercase("Me toO"))
-normalized_string.append(make_uppercase("Me toO"))
-normalized_string.append(make_uppercase("Me toO"))
-normalized_string.append(make_uppercase("Me toO"))
+# # say_hello_with_name() #this will fail!
+# # say_hello_with_name("Rob", "Chad") this will also fail
+# say_hello_with_name("Nick")
+# # print name
 
 
-print normalized_string
+# def say_hello_with_default(name, in_class = "Yes"):
+# 	print ("Hello, "+ name)
+# 	print "Is student in class? " + in_class
+
+# say_hello_with_default("Carla")
+# say_hello_with_default("Max", "No")
+# # say_hello_with_default("Natalie", "No","She's the best!")
+
+# # Functions always return something
+# def return_user_name(name):
+# 	return name
+
+# print return_user_name("YingRong")
+
+# def make_uppercase(string):
+# 	return string.upper()
+
+# normalized_string = [make_uppercase("Im A wIlD ANd craZY GuY")]
+# normalized_string.append(make_uppercase("Me toO"))
+# normalized_string.append(make_uppercase("Me toO"))
+# normalized_string.append(make_uppercase("Me toO"))
+# normalized_string.append(make_uppercase("Me toO"))
+# normalized_string.append(make_uppercase("Me toO"))
+# normalized_string.append(make_uppercase("Me toO"))
+# normalized_string.append(make_uppercase("Me toO"))
+# normalized_string.append(make_uppercase("Me toO"))
+# normalized_string.append(make_uppercase("Me toO"))
+
+
+# print normalized_string
+
+# Lists are awesome! But it's changeable. What if you
+# wanted something that wasn't changeable? 
+# A tuple is the same in all ways as a list, except:
+# 1. It's values cannot be changed
+# 2. It uses () instead of []
+
+a_tuple_test = (1,5,8)
+print a_tuple_test[1]
+# Test the tuple...
+# a_tuple_test[1] = 6
+
+# Dictionaries
+# Dictionaries are very simple objects. 
+# Operate with a "key-value pair"
+# name = "Rob"
+# gender = "Male"
+# height = "Tall"
+# print (name)
+
+# person = {
+# 	"name": "Rob",
+# 	"gender": "Male",
+# 	"height": "Tall"
+# }
+
+# print(person["name"])
+# print(person["gender"])
+
+# Can add key-value's as needed
+zombie = {}
+zombie['weapon'] = "axe"
+zombie['health'] = 100
+zombie['startX'] = 10
+zombie['startY'] = 20
+zombie['speed'] = 10
+
+print (zombie)
+
+for key,value in zombie.items():
+	print "Zombie has a key of %s with a value of %s" % (key, value) 
+	print (zombie[key])
+
+if (zombie["speed"] < 5):
+	zombie["position"] = zombie["startX"] + 5
+elif(zombie["speed"] < 10):
+	zombie["position"] = zombie["startX"] + 10
+else:
+	zombie["position"] = zombie["startX"] + 15
+
+zombie['pointless'] = "Why?"
+print zombie
+# remove the key (as well as the value)
+del zombie['pointless']
+print zombie
+
+player_push = "up"
+# variable key names
+if(player_push == "up"):
+	direction = "startY"
+else:
+	direction = "startX"
+zombie[direction] += 10
+
+zombies = []
+zombies.append({
+	'speed': 10,
+	'weapon': 'fist',
+	'name': 'Hank'
+	})
+
+zombies.append({
+	'speed': 5,
+	'weapon': 'baseball bat',
+	'name': 'Bruiser'
+})
+
+# get the second zombies speed...
+print (zombies[1]['speed'])
+
+zombies[1]['victims'] = [
+	'Jane',
+	'Mike',
+	'Jones Family':{
+		"father": "Jim"
+	}
+]
+
+print(zombies[1]['victims'][2])
