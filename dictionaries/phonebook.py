@@ -1,6 +1,33 @@
 # import stuff
 import os
 
+phonebook_data = [
+	{
+		"name": "Melissa",
+		"number": "404-235-5428"
+	},
+	{
+		"name": "Joe",
+		"number": "404-235-2125"
+	},
+	{
+		"name": "Mike",
+		"number": "770-134-2229"
+	},
+	{
+		"name": "Igor",
+		"number": "770-233-3461"
+	}
+]
+
+def get_number(name):
+	for entry in phonebook_data:
+		# BAD
+		# if phonebook_data[i].name == name:
+		# GOOD
+		if entry['name'] == name:
+			print entry['number']
+
 # Main loop
 while 1:
 	print """Electronic Phone Book
@@ -25,7 +52,8 @@ while 1:
 	else:
 		# I tried to convert it and succeeded!
 		if(convert_user == 1):
-			print "you chose 1"
+			name = raw_input("Enter a name to search for: ")
+			get_number(name)
 		elif(convert_user == 6):
 			# user chose to quit, so leave the loop
 			break
@@ -56,21 +84,3 @@ while 1:
 		elif(convert_user == 5):
 			break
 
-phonebook_data = [
-	{
-		"name": "Melissa",
-		"number": "404-235-5428"
-	},
-	{
-		"name": "Joe",
-		"number": "404-235-2125"
-	},
-	{
-		"name": "Mike",
-		"number": "770-134-2229"
-	},
-	{
-		"name": "Igor",
-		"number": "770-233-3461"
-	}
-]
