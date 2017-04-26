@@ -11,7 +11,7 @@ class Person(object):
         # pointless_variable = "Congress"
         # print pointless_variable
 
-    def greet(self, other_person):
+    def greet(self, other_person = "Stranger"):
         print "Hello %s, I am %s!" % (other_person, self.name)
 
     def print_contact_info(self):
@@ -30,6 +30,7 @@ print marissa.phone['cell']
 print marissa.phone['home']
 # print marissa.pointless_variable
 marissa.greet("Rob")
+print marissa.greet
 marissa.print_contact_info()
 merilee.print_contact_info()
 
